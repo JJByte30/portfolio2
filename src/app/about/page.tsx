@@ -9,7 +9,7 @@ export default function About () {
                     <p>Texto</p>
                     <p>Grafico</p>
                 </div>
-                <div className="flex w-1/2 mb-12">
+                <div className="flex w-1/2 mb-50">
                     <TabsComponent/>
                 </div>
             </div>
