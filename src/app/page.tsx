@@ -8,6 +8,7 @@ export default function Home() {
           <div className="z-10 text-center flex flex-col justify-center items-center gap-2 select-none border border-white w-[50%]">
             <h2>Titulo</h2>
             <p>Texto</p>
+            <p>Texto</p>
           </div>
         </div>
       </div>
