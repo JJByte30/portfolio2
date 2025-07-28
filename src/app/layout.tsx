@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         
           <Header />
-            <PageWrapper>{children}</PageWrapper>
+          <PageWrapper>{children}</PageWrapper>
           <Menu />
         
       </body>
