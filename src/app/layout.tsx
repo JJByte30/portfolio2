@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "../components/header";
 import Menu from "../components/menu";
 import PageWrapper from "../components/page-wrapper";
+import BackgroundInterativo from "@/components/BackgroundInterativo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,7 @@ export default function RootLayout({
           <Header />
           <PageWrapper>{children}</PageWrapper>
           <Menu />
-        
+          <BackgroundInterativo/>
       </body>
     </html>
   );

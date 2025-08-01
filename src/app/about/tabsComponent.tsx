@@ -9,16 +9,22 @@ export default function TabsComponent() {
 
   return (
     <div className="pl-4 relative w-[90%] mb-50">
-        <div className="flex gap-8 mb-4 *:not-last:border-r *:not-last:border-white *:pr-8 *:cursor-pointer">
-            <button className={activeTab === "skills" ? "text-blue-500 underline hover:cursor-default" : "text-white"} onClick={() => setActiveTab("skills")}>
-                <p className="text-xl hover:text-blue-500">Skills</p>
-            </button>
-            <button className={activeTab === "experience" ? "text-blue-500 underline hover:cursor-default" : "text-white" } onClick={() => setActiveTab("experience")}>
-                <p className="text-xl hover:text-blue-500">Experience</p>
-            </button>
-            <button className={activeTab === "credentials" ? "text-blue-500 underline hover:cursor-default" : "text-white"} onClick={() => setActiveTab("credentials")}>
-                <p className="text-xl hover:text-blue-500">Credentials</p>
-            </button>
+        <div className="flex gap-8 mb-4 *:not-first:border-l *:not-first:border-white *:not-first:pl-8 *:*:cursor-pointer">
+            <div>
+                <button className={`transition-transform ${activeTab === "skills" ? "text-red-500 underline hover:cursor-default" : "text-white hover:-translate-y-0.5"}`} onClick={() => setActiveTab("skills")}>
+                    <p className="text-xl hover:text-red-400">Skills</p>
+                </button>
+            </div>
+            <div>
+                <button className={`transition-transform ${activeTab === "experience" ? "text-red-500 underline hover:cursor-default" : "text-white hover:-translate-y-0.5"}`} onClick={() => setActiveTab("experience")}>
+                    <p className="text-xl hover:text-red-400">Experience</p>
+                </button>
+            </div>
+            <div>
+                <button className={`transition-transform ${activeTab === "credentials" ? "text-red-500 underline hover:cursor-default" : "text-white hover:-translate-y-0.5"}`} onClick={() => setActiveTab("credentials")}>
+                    <p className="text-xl hover:text-red-400">Credentials</p>
+                </button>
+            </div>
         </div>
 
         <div className="absolute w-full left-0 pl-4">

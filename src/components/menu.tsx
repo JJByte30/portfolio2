@@ -24,7 +24,7 @@ export default function Menu () {
     return (
         <nav className="fixed items-center end-0 flex gap-y-4 bottom-0 top-0 z-60">
             <div className="pr-6">
-                <div className="flex flex-col border border-white w-fit h-fit p-4 rounded-4xl gap-8 py-8 bg-white/10">
+                <div className="flex flex-col border border-white w-fit h-fit p-4 rounded-4xl gap-8 py-8 bg-white/10 hover:text-accent">
                     <Link href="/" onClick={() => setIsMenuOpen(false)}><House className={`size-6 hover:fill-red-400 ${isActiveLink("/") ? "fill-red-500" : "fill-white"}`}/></Link>
                     <Link href="/about"><User className={`size-6 hover:fill-red-400 ${isActiveLink("/about") ? "fill-red-500" : "fill-white"}`}/></Link>
                     <Link href="/work"><Menu2 className={`size-6 hover:fill-red-400 ${isActiveLink("/work") ? "fill-red-500" : "fill-white"}`}/></Link>

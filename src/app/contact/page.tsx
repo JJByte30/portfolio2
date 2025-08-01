@@ -19,39 +19,39 @@ export default function Contact () {
             .sendForm(serviceID, templateID, e.currentTarget, userID)
             .then(
                 (result) => {
-                    console.log("Email enviado com sucesso:", result.text);
-                    setMessage("Sua mensagem foi enviada com sucesso!");
+                    console.log("Email sent successfully:", result.text);
+                    setMessage("Your message has been sent successfully!");
                     setIsLoading(false);
                     (e.target as HTMLFormElement).reset();
                 },
                 (error) => {
-                    console.error("Erro ao enviar email", error.text);
-                    setMessage("Erro ao enviar mensagem. Tente novamente.");
+                    console.error("Error sending email", error.text);
+                    setMessage("Failed to send message. Please try again.");
                     setIsLoading(false);
                 }
             );
     }
 
     return (
-        <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-[#120f19] to-black relative overflow-hidden">
+        <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
             <div className="text-white">
-                <div className=" w-180 h-full mt-10">
+                <div className=" w-180 h-full mt-14">
                     <div className="z-10 text-center text-3xl flex flex-col select-none mb-6">
-                        <h2 className="uppercase tracking-widest font-bold"><span className="text-red-500">Contact</span>{" "}Me.</h2>
+                        <h2 className="tracking-widest text-5xl font-bold"><span className="text-red-500">Contact</span>{" "}Me.</h2>
                     </div>
 
                     {/* Formulario */}
                     <div className="">
-                        <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-4 *:*:placeholder:pl-2 *:*:border *:*:border-neutral-500/70 *:*:not-">
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-4">
                             <div className="flex gap-10 justify-between *:w-80 *:h-12 *:rounded-lg ">
-                                <input type="text" name="name" placeholder="Name" className="text-white text-lg capitalize" autoComplete="off" required/>
-                                <input type="email" name="email" placeholder="Your E-mail" className="text-white text-lg capitalize" autoComplete="off" required/>
+                                <input type="text" name="name" placeholder="Name" className="text-white text-lg normal-case pl-4 border border-neutral-500/70 focus:border-red-500 focus:outline-none" autoComplete="off" required/>
+                                <input type="email" name="email" placeholder="Your E-mail" className="text-white text-lg normal-case pl-4 border border-neutral-500/70 focus:border-red-500 focus:outline-none" autoComplete="off" required/>
                             </div>
                             <div className="*:w-full *:h-12 *:rounded-lg">
-                                <input type="text" name="subject" placeholder="Subject" className="w-full text-white text-lg capitalize" autoComplete="off" required/>
+                                <input type="text" name="subject" placeholder="Subject" className="w-full text-white text-lg normal-case pl-4 border border-neutral-500/70 focus:border-red-500 focus:outline-none" autoComplete="off" required/>
                             </div>
-                            <div className="*:w-full *:h-45 *:rounded-lg">
-                                <textarea name="message" placeholder="Message" className="text-white text-lg capitalize" autoComplete="off" required></textarea>
+                            <div className="*:w-full *:h-56 *:rounded-lg">
+                                <textarea name="message" placeholder="Message" className="text-white text-lg normal-case pl-4 pt-4 border border-neutral-500/70 focus:border-red-500 focus:outline-none resize-none" autoComplete="off" required></textarea>
                             </div>
                             
                             {/* Button Send */}
@@ -61,7 +61,7 @@ export default function Contact () {
 
                             <div className="flx justify-center">
                                 <button type="submit" disabled={isLoading} className={`border px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${isLoading ? "border-gray-500 text-gray-500 cursor-not-allowed" : "border-red-500 text-red-500 hover:bg-red-500 hover:text-white"}`}>
-                                    {isLoading ? "Enviando..." : "Send"}
+                                    {isLoading ? "Sending..." : "Send"}
                                 </button>
                             </div>
                         </form>

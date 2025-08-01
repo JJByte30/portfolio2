@@ -16,6 +16,16 @@ import PostIcon from './icones/postgresIcon.svg'
 import { img } from 'framer-motion/client'
 import HtmlHover from './icones/htmlHover.svg'
 import CssHover from './icones/cssHover.svg'
+import JsHover from './icones/jsHover.svg'
+import AngularHover from './icones/angularHover.svg'
+import ReactHover from './icones/reactHover.svg'
+import TsHover from './icones/tsHover.svg'
+import LuaHover from './icones/luaHover.svg'
+import FigmaHover from './icones/figmaHover.svg'
+import PsHover from './icones/psHover.svg'
+import AeHover from './icones/aeHover.svg'
+import PremiereHover from './icones/premiereHover.svg'
+import PostHover from './icones/postHover.svg'
 
 
 export default function Skills () {

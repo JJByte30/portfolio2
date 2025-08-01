@@ -122,7 +122,7 @@ export default function BackgroundInterativo() {
 
   return (
     <div className="">
-      <canvas ref={canvasRef} className="fixed top-26 left-0 w-full h-full" />
+      <canvas ref={canvasRef} className="fixed top-26 left-0 w-full h-full -z-10 bg-gradient-to-br from-black via-[#120f19] to-black" />
     </div>
   )
 }
